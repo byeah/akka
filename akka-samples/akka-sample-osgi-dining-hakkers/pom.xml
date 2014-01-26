@@ -141,6 +141,7 @@
                 <groupId>com.typesafe.akka</groupId>
                 <artifactId>akka-testkit_${scala.dep.version}</artifactId>
                 <version>${akka.version}</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.scalatest</groupId>

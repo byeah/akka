@@ -82,6 +82,10 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
+                        <!-- This is to force the akka-osgi BundleClassLoader to include akka-testkit in the list
+                        of transitive dependencies. Note that adding an optional import on akka.testkit should
+                        really be done in the akka-osgi bundle. -->
+                        <Import-Package>akka.testkit; resolution:=optional, *</Import-Package>
                         <Private-Package>akka.sample.osgi.internal, akka.sample.osgi.service</Private-Package>
                         <Bundle-Activator>akka.sample.osgi.activation.Activator</Bundle-Activator>
                     </instructions>
